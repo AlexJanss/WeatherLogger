@@ -1,4 +1,4 @@
-import '../css/app.css';
+import '../css/global.scss';
 
 const $ = require('jquery');
 // this "modifies" the jquery module: adding behavior to it
