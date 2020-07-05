@@ -23,6 +23,7 @@ class MenuBuilder
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('Home', ['route' => 'default']);
+        $menu->addChild('Weather Data', ['route' => 'weather_data_index']);
 
         return $menu;
     }
