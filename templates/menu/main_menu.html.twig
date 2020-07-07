@@ -1,0 +1,13 @@
+{% block list %}
+    {% if item.hasChildren and options.depth is not same as(0) and item.displayChildren %}
+        {% import 'knp_menu.html.twig' as knp_menu %}
+        <ul{{ knp_menu.attributes(listAttributes|merge({'class': [
+            options.rootClass is defined ? options.rootClass : '',
+            listAttributes.class is defined ? listAttributes.class : ''
+        ]|join(' ')
+        })) }}>
+            {% set options = options|merge({'rootClass': '' }) %}
+            {{ block('children') }}
+        </ul>
+    {% endif %}
+{% endblock %}
